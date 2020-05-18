@@ -1,0 +1,34 @@
+<template>
+    <lightning-tabset variant="vertical">
+        <lightning-tab id="tabEligibilityCheck" label="Eligibility Check" onactive={tabselect}>
+            <template if:true={showEligibilityCheck}>
+                <c-fb-eligibility-check></c-fb-eligibility-check> 
+            </template>
+        </lightning-tab>
+        <lightning-tab id="tabProfileInformation" label="Applicant Profile" onactive={tabselect}>
+            <template if:true={showProfileInformation}>
+                <c-fb-profile-information></c-fb-profile-information>         
+            </template>
+        </lightning-tab>
+        <lightning-tab id="tabAcademicInformation" label="Academic Information" onactive={tabselect}>
+            <template if:true={showAcademicInformation}>
+                <c-fb-academic-information></c-fb-academic-information>
+            </template>
+        </lightning-tab>
+        <lightning-tab id="tabActivitiesAndAwards" label="Activities and Awards" onactive={tabselect}>
+            <template if:true={showActivitiesAndAwards}>
+                <c-fb-activities-and-awards></c-fb-activities-and-awards>
+            </template>
+        </lightning-tab>
+        <lightning-tab id="tabPersonalEssay" label="Personal Essay or Original Piece of Work" onactive={tabselect}>
+            <template if:true={showPersonalEssay}>
+                <c-fb-personal-essay></c-fb-personal-essay>
+            </template>
+        </lightning-tab>
+        <lightning-tab id="tabAdditionalInformation" label="Additional Information" onactive={tabselect}>
+            <template if:true={showAdditionalInformation}>
+                <c-fb-additional-information></c-fb-additional-information>
+            </template>
+        </lightning-tab>
+    </lightning-tabset>
+</template>
